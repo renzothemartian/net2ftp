@@ -1,0 +1,70 @@
+
+//   -------------------------------------------------------------------------------
+//  |                                                                               |
+//  |                         net2ftp: Todo list                                    |
+//  |                                                                               |
+//   -------------------------------------------------------------------------------
+
+
+
+January 2003: version 0.1 - first release for developers
+========================================================
+
+
+SHORT-TERM TECHNICAL ISSUES
+---------------------------
+
+* Solve the problem that slower FTP sites cannot be reached sometimes with net2ftp
+  This function may help: ftp_set_option(FTP_TIMEOUT_SEC)
+
+* Test if the application works 
+    - without a database, if this is set in settings.inc.php
+    - with register_globals set to off
+    - on PHP > 4.0.6
+    - on other platforms (Linux, *BSD, Windows, Mac OS X)
+  and fix the possible problems
+
+* Include different skins with the application
+
+* Add compression of the HTML output, if the browser supports it.
+  This should do the trick: ob_start("ob_gzhandler")
+
+* Check - if the HTML that is outputted is really standards compliant, 
+        - if it can be used by disabled people, and 
+        - if it works in text browsers like "lynx" (who uses text browsers anyway, nowadays...)
+  Nathanael will then finally stop bugging me with this...
+
+* There is a function that maps the FTP server and directory, to the WEB (HTTP) server and directory.
+
+  It is used on the Browse screen, when a user clicks on the filename, a new window opens in 
+  which that file is executed from its WEB (not FTP) server.
+
+  This function works perfectly if a domain name is used (eg ftp.mysite.com/dir/file.php is mapped to http://www.mysite.com/dir/file.php).
+  However, this function has to be adapted on a case-by-case basis for most free hosts, because the mapping is different for each host.
+  Some examples:
+       ftp.freeserver.com/username/dir/file.php   can be mapped to   http://username.freeserver.com/dir/file.php
+                                                                     http://www.freeserver.com/username/dir/file.php
+                                                                     http://freeusers.freeserver.com//~username/dir/file.php
+  On the homepage, there should be a note for this, both for the users of free webhosts, and for the free webhosts, which would like
+  their FTP server to be reachable using net2ftp
+
+
+LONG-TERM GOALS
+---------------
+
+* Re-think the screen sequences, to improve usability 
+  For example, to upload many files, this is the screen sequence:
+      browse --> upload form --> upload result --> browse --> upload form --> upload result --> browse --> ...
+  By including the upload form on the result page as well, the user does not have to go back to the Browse screen, and
+  again to the Upload screen. This would be the new sequence of screens:
+      browse --> upload form -->          upload result (with form)       -->          upload result (with form) --> ...
+
+* Uploading and downloading a large number of files is a pain. Zip upload and download could solve this.
+      Upload: the files are grouped into a zip file on the client computer; they are decompressed on the net2ftp server and sent
+              to the FTP server.
+      Download: the files are taken from the FTP server, grouped and compressed to a single zip file on the net2ftp server and
+                sent to the client computer.
+
+* Allow the copy of the main FTP server to a second FTP server.
+  This can be handy when developing a site on one server, and when it has to be moved to production on another server.
+

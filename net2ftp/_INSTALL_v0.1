@@ -1,0 +1,35 @@
+
+//   -------------------------------------------------------------------------------
+//  |                                                                               |
+//  |                         net2ftp: Installation instructions                    |
+//  |                                                                               |
+//   -------------------------------------------------------------------------------
+
+
+###############################################################################
+#                        I M P O R T A N T    N O T E                         #
+###############################################################################
+#                                                                             #
+# IMPORTANT: YOU ARE NOT ALLOWED TO REMOVE NOR CHANGE/EDIT THE COPYRIGHT NOTE #
+# IN THE FOOTER OF EACH PAGE.                                                 #
+#                                                                             #
+###############################################################################
+
+Installation steps
+------------------
+1 - Unzip all the files on your computer, and upload them to your server.
+2 - The /temp directory should be chmodded to 777 (you can use www.net2ftp.com to do this).
+3 - Set your settings in the settings.php file: 
+       - set the root directory of the application
+       - activate or deactivate logging
+       - allow users to connect to all FTP servers, or only to a specified list
+       - ban users and FTP sites
+4 - Protect the /temp and the /admin directories. To do this, create .htaccess and .htpasswd files.
+5 - A database is only required if you want to log the actions of the users. To create the
+    tables, execute the SQL queries in the "create_tables.txt" file. This can be done easily
+    in PhpMyAdmin -- the popular front-end to MySQL.
+6 - In your php.ini file, register_globals has to be set to "on". If you are
+    using a recent PHP version (more recent than 4.0.6) then this is set to
+    "off" by default. 
+    Note: in some pages, you can already see "PHP 4.0.6 to 4.2.3 upgrade" comments. I am planning the 
+    application to work with register_globals set to "off", but this is not finished nor tested.

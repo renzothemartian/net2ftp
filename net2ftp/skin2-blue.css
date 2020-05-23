@@ -1,0 +1,191 @@
+body {
+	background-color : #6699FF;
+	color: #330066;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	font-weight: normal;
+
+	line-height: normal;
+
+	margin-left:  10px;
+	margin-right: 10px;
+	margin-top:   10px;
+}
+
+A:link {
+	color: #0000FF;
+}
+
+A:visited {
+	color: #6600FF;
+}
+
+A:hover {
+	background-color: #CCCCCC;
+}
+
+#tdleft1 {
+	background-color: #330066;
+}
+
+#tdleft2 {
+	background-color: #FFFFFF;
+}
+
+#tdmiddle {
+	background-color: #FFFFFF;
+}
+
+#tdbackground {
+	background-color: #6699FF;
+
+	border-color: #000066;
+	border-style: solid;
+	border-width: 0px;
+}
+
+#tdheader1 {
+	font-size: 100%;
+	font-weight: bold;
+	text-align: center;
+}
+
+#tditem1 {
+	font-size: 70%;
+	font-weight: normal;
+	text-align: left;
+}
+
+#header11 {
+	background-color: #6699FF;
+	color: #FFFFFF;
+
+	border: 3px;
+	border-style: solid;
+	border-color: #330066; 
+
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	padding-bottom : 10px;
+	padding-top : 10px;
+	padding-left : 20px;
+	padding-right : 20px;
+
+	font-family: arial black, monaco, chicago;
+	font-size: 30px;
+	letter-spacing: 4px;
+	line-height: 30px;
+	text-align: center;
+}
+
+#header21 {
+	color: #000066;
+
+	border: 0px;
+	border-style: solid;
+	border-color: #000066; 
+
+	text-decoration: underline;
+
+	font-size: 150%;
+	font-weight: bold;
+
+	line-height: 25px;
+	line-spacing: 1px;
+
+	margin-bottom: 10px;
+	margin-top: 30px;
+
+	padding-bottom : 3px;
+	padding-top : 3px;
+	padding-left : 0px;
+	padding-right : 20px;
+}
+
+#header31 {
+	font-size: 110%;
+	text-decoration: underline;
+}
+
+#input {
+	background-color: #FFFFFF;
+	color: #330066;
+	border-color: 330066;
+	border-width: 1;
+	height: 20;
+}
+
+#textarea {
+	background-color: #FFFFFF;
+	border-color: black;
+	border-width: 1;
+}
+
+#smallbutton {
+	background-color: #6699FF;
+	color: #FFFFFF;
+	border-color: #330066;
+	border-width: 1;
+	height: 17;
+	width: 60;
+	font-size: 85%;
+}
+
+#button {
+	background-color: #6699FF;
+	color: #FFFFFF;
+	border-color: #330066;
+	border-width: 1;
+	height: 25;
+	width: 80;
+	font-weight: bold;
+}
+
+#longbutton	{
+	background-color: #6699FF;
+	color: #FFFFFF;
+	border-color: #330066;
+	border-width: 1;
+	height: 25;
+	width: 120;
+}
+
+#extralongbutton	{
+	background-color: #6699FF;
+	color: #FFFFFF;
+	border-color: #330066;
+	border-width: 1;
+	height: 25;
+	width: 160;
+}
+
+#uploadinputbutton {
+	background-color: #FFFFFF;
+	border-color: #330066;
+	border-width: 1;
+	height: 20;
+}
+
+#code {
+	border: 1px;
+	border-style: solid;
+	border-color: #000066; 
+
+	font-family: Courier;
+	font-size: 70%;
+
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+
+	padding: 10px;
+}
+
+
+
+
